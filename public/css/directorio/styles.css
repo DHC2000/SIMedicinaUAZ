@@ -1,0 +1,530 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+:root {
+    --main-blue-color: #32a1c8;
+    --main-yellow-color: #c8aa10;
+    --main-dark-blue:#150e2f;
+
+  }
+body{
+    background:#FFF;
+}
+
+.grid-container{
+    display:grid;
+    width:100%;
+    height:100vh;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+	 grid-template-rows: 1fr 1fr 1fr ;
+    background:#FFF;
+}
+
+.bttnBars{
+    width: 100vw;
+    height: 5vh;
+    background-color: var(--main-blue-color);
+    display: none;
+  }
+  .toggle{
+     color: #FFF;
+     background:none;
+     border: none;
+    font-size: 3vh;
+    padding-left: 2vw;
+    padding-top: 1vh;
+    /*display: none;*/
+  }
+
+.grid-container .logo-container {
+    background:url("../imgs/medicinauaz.jpg");
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+    	background-size: contain;
+    height: 60%;
+}
+
+
+/*.item{
+    border: 2px solid #000;
+}*/
+
+.grid-container .main-menu .submn-nosotros{
+    	display:none;
+}
+
+
+.main-menu{
+    grid-column:2/ span 5 ;
+
+/*    grid-area:m-menu;
+    	background:#12305c;*/
+    	background:#FFF;
+}
+
+
+.banner-container{
+    grid-column:1/ span 6;
+    grid-row:2/span 2;
+ /*    grid-area:banner;*/
+   	background-size: cover;
+    overflow: scroll;
+}
+
+.sec-menu{
+    grid-column:0/ span 1;
+    grid-row:2/span 2;
+/*    grid-area:s-menu;*/
+    	background:#FFF;
+}
+
+.contact-container{
+/*    grid-column:1/ span 2;*/
+/*    grid-area:contact;
+    	background:#5c125a;*/
+    background:#eee;
+}
+
+.sites-container{
+/*    grid-column:1/ span 2;*/
+/*    grid-area:sites;*/
+    	background:#5c1231;
+}
+
+.maps-container{
+/*    grid-column:2/ span 3;*/
+/*    grid-area:maps;*/
+    	background:#5c1213;
+}
+
+.networks-container{
+/*    grid-column:4/ span 5;*/
+/*    grid-area:networks;*/
+    	background:#125c26;
+}
+
+
+.grid-container .main-menu ul {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    list-style:none;
+    padding:10px;
+
+}
+/*
+#btnFondo{
+    background: none;
+    border: none;
+ }
+#btnFondo i {
+    font-size: 30px;
+ }
+
+ .sol{
+    color: yellow;
+ }
+
+ .fondo{
+    background-image: radial-gradient(circle at 50% 50%, #1c1a1c 0, #1c1a1c 50%, #1c1a1c 100%);
+ }
+
+ .visible{
+    visibility: hidden;
+ }*/
+
+.grid-container .main-menu ul li,
+.grid-container .sec-menu ul li{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+.grid-container .main-menu .menu li a{
+    width:100%;
+    color:#32a1c8;
+    font-size:18px;
+    text-align:center;
+    font-weight:100;
+}
+
+.grid-container .main-menu .menu > li {
+    position:relative;
+    display:inline-block;
+/*    background:green;*/
+}
+
+.grid-container .main-menu .menu li:hover .submn,
+.grid-container .main-menu .sec-menu li:hover{
+    transition: all 1s;
+}
+.grid-container .main-menu .menu > li > a {
+    	display:block;
+    text-decoration:none;
+    position:relative;
+}
+
+.grid-container .main-menu .menu .submn{
+    display:block;
+    width:110%;
+    visibility:hidden;
+    opacity:0;
+    position:absolute;
+    z-index:200;
+}
+
+.grid-container .main-menu li:hover .submn{
+    	position:absolute;
+    	visibility:visible;
+    opacity:1;
+    transition:opacity;
+    background:#FFF;
+    	padding:15px;
+}
+
+.grid-container .main-menu .menu .submn li a {
+    	display:block;
+    	text-decoration:none;
+    color:#32a1c8;
+
+}
+
+
+.grid-container .sec-menu ul {
+    	display:grid;
+    	grid-template-columns:1fr;
+    	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height:100%;
+    padding-top:1%;
+    text-decoration:none;
+    text-align: center;
+}
+.grid-container .sec-menu ul li{
+    	color:#FFF;
+}
+
+.grid-container .sec-menu ul li a{
+    width:100%;
+    text-decoration:none;
+    color:#32a1c8;
+    font-size:18px;
+    text-align:center;
+    font-weight:100;
+    font-weight: bold;
+
+
+
+}
+
+
+.grid-container .main-menu ul li:hover{
+    	background:#a9d9ea;
+    color:#FFF;
+}
+
+.grid-container .sec-menu ul li:hover {
+    transition:opacity;
+    	background:#061f40;
+    	color:#FFF;
+}
+
+.grid-container .main-menu ul li:hover a,.main-menu .menu .submn li:hover a,
+.grid-container .sec-menu ul li:hover a {
+   	/* background:#a9d9ea;*/
+    	color:#fff;
+}
+
+.grid-container .f-title{
+    padding-top:5%;
+    padding-bottom:3%;
+    text-align:center;
+}
+
+.grid-container .contact-container,
+.grid-container .sites-container,
+.maps-container,
+.networks-container{
+    	background:#061f40;
+    	color:#fff;
+}
+
+.grid-container .contact-container i,
+.grid-container .sites-container i,
+.maps-container i,
+.f-title{
+    font-size:22px;
+    	color:#c8aa10;
+}
+
+.networks-container i{
+    	font-size:28px;
+    	color:#c8aa10;
+}
+
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li,
+.maps-container ul li,
+.networks-container ul li {
+    color:#061f40;
+    font-size:16px;
+    text-align:center;
+    text-decoration:none;
+}
+
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li a,
+.maps-container ul li a,
+.networks-container ul li a {
+    background:#061f40;
+    color:#FFF;
+    text-decoration: none;
+    text-align:center;
+}
+
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li,
+.maps-container ul li,
+.networks-container ul li{
+    padding-bottom: 10px;
+}
+
+.networks-container .face-fresnillo{
+  color:#FFF;
+}
+.networks-container ul p{
+  text-align: center;
+}
+
+.grid-container .sites-container ul {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  list-style:none;
+  padding:5px;
+
+}
+.grid-container .sites-container ul li {
+    width: 70%;
+    height: 70%;
+}
+
+
+.banner-container .container-direccion h1{
+    text-align: center;
+    color: var(--main-dark-blue);
+    /*justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;*/
+}
+
+.banner-container .container-direccion,
+.direccion__inicio h2,
+.direccion__mensaje h2,
+.direccion__conocela h2,
+.direccion__inf-labrs h2,
+.direccion__plan-des h2,
+.direccion__agenda h2,
+.direccion__contacto h2{
+    padding-top: 4%;
+    padding-bottom: 2%;
+    color: var(--main-dark-blue);
+}
+
+
+.direccion__inicio .img-container{
+    display: flex;
+    width: 20vw;
+    height: 25vh;
+    background-color: violet;
+    float: right;
+}
+
+.container-direccion p,
+.container-direccion h3{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.container-direccion h3{
+    padding-bottom: 2%;
+}
+
+.banner-container p{
+    font-size: 20px;
+    color: #000;
+}
+
+.banner-container i{
+    padding-top: 2%;
+    color: var(--main-dark-blue);
+}
+
+.directori-title{
+  width: 100%;
+  height: 6vh;
+  background-color: var(--main-blue-color);
+  color: #FFF;
+  text-align: center;
+}
+.directori-title h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+.banner-container .directorio{
+    display: flex;
+    width: 70%;
+    height: 300px;
+    background-color: #FFF;
+    padding: 5%;
+    text-align: center;
+    border: 1px solid var(--main-blue-color);
+    margin: 2% 5%;
+
+}
+
+.banner-container .directorio p{
+    /*display: flex;*/
+    cursor: pointer;
+    overflow: auto;
+    font-size: 20px;
+}
+
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.directorio p::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.directorio p::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.directorio p:-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.directorio p::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.directorio p::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.directorio p::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.banner-container .directorio h2{
+    display: block;
+    width: 40%;
+    /*margin-right: 10px;*/
+}
+
+.banner-container .directorio .activo{
+    cursor: pointer;
+    transition:transform 0.5s ease-out;
+}
+
+.banner-container .directorio .activo:hover{
+    color: var(--main-blue-color);
+    transform: scale(1.2);
+}
+
+.banner-container .organigrama{
+    display: flex;
+    width: 650px;
+    height: 380px;
+    background:url("../imgs/organigrama1.jpg");
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+    background-size: contain;
+    margin: 2% 10%;
+
+}
+
+.banner-container .container-directorio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .grid-container{
+        display: block;
+        /*background-color: var(--main-dark-blue);*/
+    }
+    .logo-container{
+      background:url("../imgs/medicinauaz.jpg");
+      background-repeat: no-repeat;
+    /*    background-attachment: fixed;*/
+      background-size: contain;
+      height: 60%;
+      position: relative;
+    }
+     .bttnBars{
+         display: block;
+     }
+     .grid-container .main-menu .menu{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+
+     }
+
+     .menu-visible{
+         position:absolute;
+         display: none;
+         visibility: hidden;
+
+     }
+
+     .banner-container .container-directorio{
+         display: block;
+     }
+
+    .banner-container .directorio{
+    width: 100vw;
+    height: 300px;
+    background-color: #FFF;
+    padding: 4%;
+    text-align: center;
+    margin: 0%;
+    border: 1px solid var(--main-blue-color);
+
+}
+
+.banner-container .organigrama{
+
+    width: 100vw;
+    height: 50vh;
+    background:url("../imgs/organigrama1.jpg");
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+    background-size: contain;
+    margin: 0;
+
+}
+
+     .sec-menu{
+      position:absolute;
+      display: none;
+      visibility: hidden;
+     }
+
+  }
+
+
+
+
+  /**************************************************/

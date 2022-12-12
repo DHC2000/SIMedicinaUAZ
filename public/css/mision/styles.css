@@ -1,0 +1,652 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+:root {
+    --main-blue-color: #32a1c8;
+    --main-yellow-color: #c8aa10;
+    --main-dark-blue:#150e2f;
+
+  }
+body{
+    background:#FFF;
+}
+
+.grid-container{
+    display:grid;
+    width:100%;
+    height:100vh;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+	 grid-template-rows: 1fr 1fr 1fr;
+    background:#FFF;
+}
+
+.bttnBars{
+    width: 100vw;
+    height: 5vh;
+    background-color: var(--main-blue-color);
+    display: none;
+  }
+  .toggle{
+     color: #FFF;
+     background:none;
+     border: none;
+    font-size: 3vh;
+    padding-left: 2vw;
+    padding-top: 1vh;
+    /*display: none;*/
+  }
+
+.grid-container .logo-container {
+    background:url("../imgs/medicinauaz.jpg");
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+    	background-size: contain;
+    height: 60%;
+}
+
+
+/*.item{
+    border: 2px solid #000;
+}*/
+
+.grid-container .main-menu .submn-nosotros{
+    	display:none;
+}
+
+
+.main-menu{
+    grid-column:2/ span 5 ;
+
+/*    grid-area:m-menu;
+    	background:#12305c;*/
+    	background:#FFF;
+}
+
+
+.banner-container{
+    grid-column:1/ span 6;
+    grid-row:2/span 2;
+/*    grid-area:banner;*/
+   	background-size: cover;
+    overflow: scroll;
+}
+
+.sec-menu{
+    grid-column:0/ span 1;
+    grid-row:2/span 2;
+/*    grid-area:s-menu;*/
+    	background:#FFF;
+}
+
+.contact-container{
+  grid-column:1/ span 1;
+/*    grid-area:contact;
+    	background:#5c125a;*/
+    background:#eee;
+}
+
+.sites-container{
+/*    grid-column:2/span 3;*/
+/*    grid-area:sites;*/
+    	background:#5c1231;
+}
+
+.maps-container{
+/*    grid-column:3/span 4;*/
+/*    grid-area:maps;*/
+    	background:#5c1213;
+}
+
+.networks-container{
+/*    grid-column:4/ span 5;
+/*    grid-area:networks;*/
+    	background:#125c26;
+}
+
+
+.grid-container .main-menu ul {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    	grid-template-rows: 1fr 1fr 1fr 1fr 1fri;
+    list-style:none;
+    padding:10px;
+
+}
+
+.grid-container .main-menu ul li,
+.grid-container .sec-menu ul li{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.grid-container .main-menu .menu li a{
+    width:100%;
+    color:#32a1c8;
+    font-size:18px;
+    text-align:center;
+    font-weight:100;
+}
+
+.grid-container .main-menu .menu > li {
+    position:relative;
+    display:inline-block;
+/*    background:green;*/
+}
+
+.grid-container .main-menu .menu li:hover .submn,
+.grid-container .main-menu .sec-menu li:hover{
+    transition: all 1s;
+}
+.grid-container .main-menu .menu > li > a {
+    	display:block;
+    text-decoration:none;
+    position:relative;
+}
+
+.grid-container .main-menu .menu .submn{
+    display:block;
+    width:110%;
+    visibility:hidden;
+    opacity:0;
+    position:absolute;
+    z-index:200;
+}
+
+.grid-container .main-menu li:hover .submn{
+    	position:absolute;
+    	visibility:visible;
+    opacity:1;
+    transition:opacity;
+    background:#FFF;
+    	padding:15px;
+}
+
+.grid-container .main-menu .menu .submn li a {
+    	display:block;
+    	text-decoration:none;
+    color:#32a1c8;
+
+}
+
+
+.grid-container .sec-menu ul {
+    	display:grid;
+    	grid-template-columns:1fr;
+    	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height:100%;
+    padding-top:1%;
+    text-decoration:none;
+    text-align: center;
+}
+.grid-container .sec-menu ul li{
+    	color:#FFF;
+}
+
+.grid-container .sec-menu ul li a{
+    width:100%;
+    text-decoration:none;
+    color:#32a1c8;
+    font-size:18px;
+    text-align:center;
+    font-weight:100;
+    font-weight: bold;
+
+
+
+}
+
+/*.grid-container .main-menu ul li a,
+.grid-container .sec-menu ul li a {
+    color:#FFF;
+}*/
+
+.grid-container .main-menu ul li:hover{
+    	background:#a9d9ea;
+    color:#FFF;
+}
+
+.grid-container .sec-menu ul li:hover {
+    transition:opacity;
+    	background:#061f40;
+    	color:#FFF;
+}
+
+.grid-container .main-menu ul li:hover a,.main-menu .menu .submn li:hover a,
+.grid-container .sec-menu ul li:hover a {
+   	/* background:#a9d9ea;*/
+    	color:#fff;
+}
+
+.grid-container .f-title{
+    padding-top:5%;
+    padding-bottom:3%;
+    text-align:center;
+
+    /*justify-content:center;
+    align-items:center;*/
+}
+
+.grid-container .contact-container,
+.grid-container .sites-container,
+.maps-container,
+.networks-container{
+    	background:#061f40;
+    	color:#fff;
+}
+
+.grid-container .contact-container i,
+.grid-container .sites-container i,
+.maps-container i,
+.f-title{
+    font-size:22px;
+    color:#c8aa10;
+}
+
+.networks-container i{
+    	font-size:28px;
+    	color:#c8aa10;
+}
+
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li,
+.maps-container ul li,
+.networks-container ul li{
+    padding-bottom: 10px;
+}
+
+.networks-container .face-fresnillo{
+  color:#FFF;
+}
+.networks-container ul p{
+  text-align: center;
+}
+
+.grid-container .sites-container ul {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  list-style:none;
+  padding:5px;
+
+}
+.grid-container .sites-container ul li {
+  width: 70%;
+  height: 70%;
+}
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li,
+.maps-container ul li,
+.networks-container ul li {
+    color:#061f40;
+    font-size:16px;
+    text-align:center;
+    text-decoration:none;
+}
+
+.grid-container .contact-container ul li,
+.grid-container .sites-container ul li a,
+.maps-container ul li a,
+.networks-container ul li a {
+    background:#061f40;
+    color:#FFF;
+    text-decoration: none;
+    text-align:center;
+}
+
+
+
+.banner-container .container-direccion h1{
+    text-align: center;
+    color: var(--main-dark-blue);
+    /*justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;*/
+}
+
+.banner-container .container-direccion,
+.direccion__inicio h2,
+.direccion__mensaje h2,
+.direccion__conocela h2,
+.direccion__inf-labrs h2,
+.direccion__plan-des h2,
+.direccion__agenda h2,
+.direccion__contacto h2{
+    padding-top: 4%;
+    padding-bottom: 2%;
+    color: var(--main-dark-blue);
+}
+
+
+.direccion__inicio .img-container{
+    display: flex;
+    width: 20vw;
+    height: 25vh;
+    background-color: violet;
+    float: right;
+}
+
+.container-direccion p,
+.container-direccion h3{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.container-direccion h3{
+    padding-bottom: 2%;
+}
+
+.banner-container p{
+    font-size: 20px;
+    color: #000;
+}
+
+.banner-container i{
+    padding-top: 2%;
+    color: var(--main-dark-blue);
+}
+
+
+.conocenos{
+  width: 100%;
+  height: 6vh;
+  margin-bottom: 2em;
+  background-color: var(--main-blue-color);
+  color: #FFF;
+  text-align: center;
+}
+.conocenos h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+/*****************************Plan- Crads******************************/
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .grid-container{
+        display: block;
+        /*background-color: var(--main-dark-blue);*/
+    }
+    .logo-container{
+      display: none;
+    /*  background:url("../imgs/medicinauaz.jpg");
+      background-repeat: no-repeat;
+    /*    background-attachment: fixed;
+      background-size: contain;
+      height: 60%;
+      position: relative;*/
+    }
+     .bttnBars{
+         display: block;
+     }
+     .grid-container .main-menu .menu{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+
+     }
+
+     .menu-visible{
+         position:absolute;
+         display: none;
+         visibility: hidden;
+
+     }
+     .banner-container{
+        display: block;
+        width: 100vw;
+        height: 60vh;
+
+     }
+     .conocenos{
+      background-color: #FFF;
+      color: var(--main-blue-color);
+    }
+    .conocenos h1{
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+     .direccion__inicio .img-container{
+        display: block;
+        width: 100vw;
+        height: 35vh;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        background-color: violet;
+    }
+
+     .sec-menu{
+      position:absolute;
+      display: none;
+      visibility: hidden;
+     }
+
+  }
+
+
+
+
+  /**************************************************/
+
+
+  /* hide radio buttons, but still expose them to screen readers */
+  .container-mision input {
+    position: absolute;
+    width: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .container-mision .selector {
+    display: grid;
+    grid-template-areas:
+      'happy lovers'
+      'pick  pick';
+  }
+
+  /* the cards and toggle buttons are actually fat labels that can be clicked to set radio buttons */
+  .container-mision label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .container-mision .happy-card, .lovers-card {
+    position: relative; /* for iOS */
+    width: 370px;
+    padding: 20px;
+    color: #586875;
+    background-color: #f4f7f7;
+    box-shadow: 0 10px 20px #0006;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out; /* important to use a symmetrical timing function (linear also works) */
+    animation-fill-mode: forwards;
+  }
+
+  .container-mision .happy-card {
+    grid-area: happy;
+    margin-right: -10px; /* nudge closer to lover's card */
+
+    /* these values are used to animate via translateX */
+    --swing: -25px;
+    --overlap: 25px;
+
+    margin-left: 36vw;
+  }
+
+  .container-mision .lovers-card {
+    grid-area: lovers;
+    margin-left: -10px; /* nudge closer to happy card */
+
+    /* these values are used to animate via translateX */
+    --swing: 25px;
+    --overlap: -25px;
+
+    margin-right: 36vw;
+  }
+
+  /* when a radio button is set, swing the corresponding card fowards */
+  #happy-radio:checked ~ .selector .happy-card,
+  #lovers-radio:checked ~ .selector .lovers-card {
+    animation-name: swing-forwards;
+  }
+
+  @keyframes swing-forwards {
+    0% {
+      z-index: 1; /* start behind other card */
+      transform: scale(0.9);
+    }
+    50% {
+      transform: translateX(var(--swing));
+    }
+    100% {
+      z-index: 2; /* end in front of other card */
+      transform: translateX(var(--overlap)) scale(1.1);
+    }
+  }
+
+  /* when a radio button is set, swing the opposite card backwards */
+  #happy-radio:checked ~ .selector .lovers-card,
+  #lovers-radio:checked ~ .selector .happy-card {
+    animation-name: swing-backwards;
+  }
+
+  @keyframes swing-backwards {
+    0% {
+      z-index: 2;  /* start in front of other card */
+      transform: translateX(var(--overlap)) scale(1.1);
+    }
+    50% {
+      transform: translateX(var(--swing));
+    }
+    100% {
+      z-index: 1; /* end behind other card */
+      transform: scale(0.9);
+    }
+  }
+
+  .container-mision h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #bdd6d2;
+    font-size: 1.5rem;
+  }
+
+  .container-mision ul {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 1.5rem;
+    list-style-type: square;
+  }
+
+  .container-mision p {
+    margin: 0 -20px -20px;
+    padding: 15px;
+    background-color: #bdd6d2;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .container-mision .happy-pick, .lovers-pick {
+    grid-area: pick;
+    margin: 50px auto 0;
+    padding: 15px;
+    border: 1px solid #f4f7f7;
+    border-radius: 9999px;
+    background-color: #b46d73;
+    font-size: 1.25rem;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .happy-pick::before, .lovers-pick::after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+  }
+
+  .happy-pick::before {
+    margin-right: 10px;
+    content: '\f0a8'; /* fa-arrow-circle-left */
+  }
+
+  .lovers-pick::after {
+    margin-left: 10px;
+    content: '\f0a9'; /* fa-arrow-circle-right */
+  }
+
+  /* hide happy toggle button if happy is currently selected */
+  #happy-radio:checked ~ .selector .happy-pick {
+    display: none;
+  }
+
+  /* hide lover's toggle button if lover's is currently selected */
+  #lovers-radio:checked ~ .selector .lovers-pick {
+    display: none;
+  }
+
+
+
+  @media (max-width: 1000px) {
+    .banner-container .container-mision .happy-card {
+        width: 350px;
+        margin-left: 60%;
+      /*  margin: 0%;
+        margin-right: -105px;
+      --swing: -100px;*/
+    }
+
+    .banner-container .container-mision .lovers-card {
+        width: 350px;
+    /*  margin: 0%;
+      margin-left: -105px;
+      --swing: 100px;*/
+    }
+  }
+
+  @media (max-width: 850px) {
+    .banner-container .container-mision .happy-card {
+        width: 350px;
+        margin-left: 30%;
+    }
+
+    .banner-container .container-mision .lovers-card {
+        width: 350px;
+    }
+  }
+  @media (max-width: 750px) {
+    .banner-container .container-mision .happy-card {
+        width: 350px;
+        margin-left: 10%;
+    }
+
+    .banner-container .container-mision .lovers-card {
+        width: 350px;
+    }
+  }
+
+  /* increase overlap and swing distance on smaller screens */
+  @media (max-width: 560px) {
+    .banner-container .container-mision .happy-card {
+        width: 250px;
+        margin: 0%;
+        margin-right: -85px;
+      --swing: -100px;
+    }
+
+    .banner-container .container-mision .lovers-card {
+        width: 250px;
+      margin: 0%;
+      margin-left: -85px;
+      --swing: 100px;
+    }
+  }
